@@ -1,0 +1,108 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/vaidashi/turing/3module/projects/api_curious/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/api_curious/app/models/user.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/api_curious/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/api_curious/app/controllers/home_controller.rb": [
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/api_curious/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/api_curious/app/controllers/sessions_controller.rb": [
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/api_curious/app/controllers/dashboard_controller.rb": [
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/vaidashi/turing/3module/projects/api_curious/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/vaidashi/turing/3module/projects/api_curious/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/vaidashi/turing/3module/projects/api_curious/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/vaidashi/turing/3module/projects/api_curious/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1507670421
+  }
+}
