@@ -13,7 +13,7 @@ RSpec.feature "user logs in/out" do
 
     expect(page).to have_link("Logout")
     click_link "Logout"
-    
+
     expect(page).to have_link("Sign in with Github")
   end
 end
