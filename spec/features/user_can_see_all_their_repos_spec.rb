@@ -10,7 +10,8 @@ feature "User can see list of repos" do
 
   it "from their profile" do
     # stub_omniauth
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    allow_any_instance_of(ApplicationController).to receive(
+    :current_user).and_return(user)
 
     visit "/dashboard"
 
