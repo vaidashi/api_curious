@@ -20,7 +20,14 @@ class DashboardController < ApplicationController
 
      org_response = @conn.get("/users/#{current_user.nickname}/orgs")
      @orgs = JSON.parse(org_response.body, symbolize_names: true)
-    #  binding.pry
+
+     basic_info_response = @conn.get("/user")
+     @info = JSON.parse(basic_info_response.body)
+
+     starred_response = @conn.get("/users/#{current_user.nickname}/starred")
+     @starred = JSON.parse(starred_response.body)
+
+     binding.pry
   end
 
 
