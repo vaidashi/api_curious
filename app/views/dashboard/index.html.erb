@@ -65,3 +65,13 @@
  <li>  following: <%= @list_of_following %> </li>
  <li>  followers: <%= @list_of_followers %>
 </ul>
+
+<br><br>
+
+<h3> Recent Activity </h3>
+
+<ul>
+<% @my_commits.each do |k,v| %>
+<li> <%= k %> commit from <%= v %> repo  </li>
+<% end %>
+</ul>

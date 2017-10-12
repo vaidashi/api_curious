@@ -21,6 +21,7 @@ class DashboardController < ApplicationController
      org_response = @conn.get("/users/#{current_user.nickname}/orgs")
      @orgs = JSON.parse(org_response.body, symbolize_names: true)
 
+
      basic_info_response = @conn.get("/user")
      @info = JSON.parse(basic_info_response.body)
 
@@ -38,6 +39,17 @@ class DashboardController < ApplicationController
      @list_of_followers = followers.map do |fol|
        fol["login"]
      end
+
+     commits = {}
+     my_activity_response = @conn.get("/users/#{current_user.nickname}/events")
+     result = JSON.parse(my_activity_response.body, symbolize_names: true)
+     result.each do |event|
+       if event[:payload][:commits]
+         event[:payload][:commits].each {|commit| commits[commit[:message]] = event[:repo][:name]}
+       end
+     end
+     commits
+     @my_commits = commits
 
      
     #  binding.pry
