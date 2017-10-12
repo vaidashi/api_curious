@@ -51,7 +51,8 @@ class DashboardController < ApplicationController
      commits
      @my_commits = commits
 
-     
+     following_activity = @conn.get("/users/#{current_user.nickname}/received_events")
+     @their_activity = JSON.parse(following_activity.body, symbolize_names: true)
     #  binding.pry
   end
 

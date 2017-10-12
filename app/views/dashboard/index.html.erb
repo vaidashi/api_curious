@@ -8,19 +8,10 @@
 
 <br><br>
 
-<img src="https://avatars3.githubusercontent.com/u/25907721?v=4" alt="" style="width:250px;height:228px;>
+<!-- <img src="https://avatars3.githubusercontent.com/u/25907721?v=4" alt="" style="width:250px;height:128px; padding: 5px;> -->
 
 
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br><br><br>
-<br><br>
-<br><br><br><br>
-<br><br>
-<br><br>
+
 
 
 
@@ -74,4 +65,16 @@
 <% @my_commits.each do |k,v| %>
 <li> <%= k %> commit from <%= v %> repo  </li>
 <% end %>
+</ul>
+
+
+<br><br>
+<br><br>
+
+<h3> Followers Activity </h3>
+
+<ul>
+<% @their_activity.each do |activity| %>
+<p> <strong> <%= activity[:actor][:login] %> </strong> did <em> <%= activity[:type] %> </em> for <%= activity[:repo][:name] %> on <%= activity[:created_at] %> </p>
+ <% end %>
 </ul>
