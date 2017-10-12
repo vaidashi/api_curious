@@ -17,6 +17,10 @@ class DashboardController < ApplicationController
 
      repo_response = @conn.get("/user/repos")
      @repos = JSON.parse(repo_response.body, symbolize_names: true)
+
+     org_response = @conn.get("/users/#{current_user.nickname}/orgs")
+     @orgs = JSON.parse(org_response.body, symbolize_names: true)
+    #  binding.pry
   end
 
 

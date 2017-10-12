@@ -19,10 +19,10 @@
 <br><br>
 
 <h3>List of Organizations</h3>
-<div class="repos">
+<div class="organizations">
   <ul>
-    <% @repos.map do |repo| %>
-     <li class="repo"> <%= repo[:name]  %> </li>
+    <% @orgs.map do |org| %>
+     <li class="organization"> <%= org[:login]  %> </li>
      <% end %>
   </ul>
 </div>

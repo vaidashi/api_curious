@@ -19,6 +19,22 @@
         1,
         null,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/vaidashi/turing/3module/projects/api_curious/app/models/application_record.rb": [
@@ -44,7 +60,7 @@
         null,
         null,
         1,
-        4,
+        3,
         null,
         null,
         null
@@ -90,6 +106,10 @@
         null,
         3,
         3,
+        null,
+        3,
+        3,
+        null,
         null,
         null,
         null,
@@ -141,6 +161,6 @@
         0
       ]
     },
-    "timestamp": 1507763580
+    "timestamp": 1507820276
   }
 }
