@@ -9,6 +9,8 @@ feature "User can view list of organizations they are a member of" do
                       }
 
   it "on their profile once they log in" do
+    VCR.use_cassette("find_user_orgs") do
+
     # binding.pry
     allow_any_instance_of(ApplicationController).to receive(
     :current_user).and_return(user)
@@ -17,4 +19,5 @@ feature "User can view list of organizations they are a member of" do
 
     expect(page).to have_css('.organization', count: 1)
   end
+end
 end

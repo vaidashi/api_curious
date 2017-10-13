@@ -12,7 +12,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+/spec/cassettes
 /node_modules
 /yarn-error.log
 

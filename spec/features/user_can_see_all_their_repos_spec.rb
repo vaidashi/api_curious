@@ -10,6 +10,7 @@ feature "User can see list of repos" do
 
   it "from their profile" do
     # stub_omniauth
+    VCR.use_cassette("find_user_repos") do
     allow_any_instance_of(ApplicationController).to receive(
     :current_user).and_return(user)
 
@@ -17,7 +18,7 @@ feature "User can see list of repos" do
 
     expect(page).to have_css('.repo', count: 30)
   end
-
+end
 end
 
   # def stub_omniauth

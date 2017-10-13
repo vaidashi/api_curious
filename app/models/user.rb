@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  validates_presence_of :nickname, :uid
+  # validates :nickname, presence: true
+  # validates :uid, presence: true
 
   def self.find_or_create_from_auth(auth)
     user = User.find_or_create_by(uid: auth['uid'])
@@ -12,7 +15,7 @@ class User < ApplicationRecord
   end
 
  ##possible fix for token issue
- 
+
   # def self.from_omniauth(auth_info)
   #   user = User.where(uid: auth_info.uid).first
   #   if !user.nil? && user.oauth_token == auth_info.credentials.token
