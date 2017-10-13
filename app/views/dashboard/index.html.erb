@@ -39,8 +39,8 @@
 <h3>List of Organizations</h3>
 <div class="organizations">
   <ul>
-    <% @orgs.map do |org| %>
-     <li class="organization"> <%= org[:login]  %> </li>
+    <% @dashboard_display.orgs.each do |org| %>
+     <li class="organization"> <%= org.login  %> </li>
      <% end %>
   </ul>
 </div>
