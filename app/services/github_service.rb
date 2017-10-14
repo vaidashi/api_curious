@@ -21,7 +21,10 @@ class GithubService
     @orgs = JSON.parse(org_response.body, symbolize_names: true)
   end
 
-
+  def starred_call
+     starred_response = @conn.get("/users/#{current_user.nickname}/starred")
+     @starred = JSON.parse(starred_response.body, symbolize_names: true)
+  end
 
   private
 

@@ -31,5 +31,14 @@ class DashboardPresenter
     end
   end
 
+  def starred_repos
+    api_starred_call = GithubService.new(current_user).starred_call
+
+    present_starred_repos(api_starred_call)
+  end
+
+  def present_starred_repos(api_starred_call)
+    @starred_count = api_starred_call.count
+  end
 
 end

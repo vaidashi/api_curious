@@ -15,7 +15,7 @@ feature "User can view their basic info" do
       :current_user).and_return(user)
 
       visit '/dashboard'
-
+# save_and_open_page
       expect(page).to have_content("starred count: 1")
     end
 end

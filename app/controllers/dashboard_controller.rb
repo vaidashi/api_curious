@@ -13,12 +13,7 @@ class DashboardController < ApplicationController
       faraday.headers["Authorization"] = "token #{ENV['GITHUB_TOKEN']}"
       faraday.adapter Faraday.default_adapter
      end
-    
-     basic_info_response = @conn.get("/user")
-     @info = JSON.parse(basic_info_response.body)
 
-     starred_response = @conn.get("/users/#{current_user.nickname}/starred")
-     @starred = JSON.parse(starred_response.body)
 
      following_response = @conn.get("/users/#{current_user.nickname}/following")
      following = JSON.parse(following_response.body)
