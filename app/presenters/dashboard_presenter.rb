@@ -62,7 +62,23 @@ class DashboardPresenter
   def present_followers_list(api_followers_call)
     api_followers_call.map do |follower|
       follower[:login]
-    end 
+    end
+  end
+
+  def my_commits
+    api_commits_call = GithubService.new(current_user).user_commits_call
+
+    present_user_commits(api_commits_call)
+  end
+
+  def present_user_commits(api_commits_call)
+    commits = {}
+    api_commits_call.map do |event|
+       if event[:payload][:commits]
+         event[:payload][:commits].each {|commit| commits[commit[:message]] = event[:repo][:name]}
+       end
+     end
+     commits
   end
 
 end

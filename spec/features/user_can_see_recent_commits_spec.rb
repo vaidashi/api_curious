@@ -15,7 +15,7 @@ feature "User can view recent activity" do
       :current_user).and_return(user)
 
       visit '/dashboard'
-
+save_and_open_page
       expect(page).to have_content("moving user search info call to model commit from vaidashi/api_curious repo")
     end
   end

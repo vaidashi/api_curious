@@ -36,6 +36,11 @@ class GithubService
     @followers = JSON.parse(followers_response.body, symbolize_names: true)
   end
 
+  def user_commits_call
+    my_activity_response = @conn.get("/users/#{current_user.nickname}/events")
+    @result = JSON.parse(my_activity_response.body, symbolize_names: true)
+  end
+
   private
 
   attr_reader :current_user

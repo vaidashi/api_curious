@@ -15,17 +15,6 @@ class DashboardController < ApplicationController
      end
 
 
-     commits = {}
-     my_activity_response = @conn.get("/users/#{current_user.nickname}/events")
-     result = JSON.parse(my_activity_response.body, symbolize_names: true)
-     result.each do |event|
-       if event[:payload][:commits]
-         event[:payload][:commits].each {|commit| commits[commit[:message]] = event[:repo][:name]}
-       end
-     end
-     commits
-     @my_commits = commits
-
      following_activity = @conn.get("/users/#{current_user.nickname}/received_events")
      @their_activity = JSON.parse(following_activity.body, symbolize_names: true)
     #  binding.pry
