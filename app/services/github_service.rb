@@ -31,6 +31,11 @@ class GithubService
     @following = JSON.parse(following_response.body, symbolize_names: true)
   end
 
+  def followers_call
+    followers_response = @conn.get("/users/#{current_user.nickname}/followers")
+    @followers = JSON.parse(followers_response.body, symbolize_names: true)
+  end
+
   private
 
   attr_reader :current_user

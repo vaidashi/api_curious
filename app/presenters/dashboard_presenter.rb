@@ -53,4 +53,16 @@ class DashboardPresenter
     end
   end
 
+  def follower_list
+    api_followers_call = GithubService.new(current_user).followers_call
+
+    present_followers_list(api_followers_call)
+  end
+
+  def present_followers_list(api_followers_call)
+    api_followers_call.map do |follower|
+      follower[:login]
+    end 
+  end
+
 end
