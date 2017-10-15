@@ -57,7 +57,7 @@
 <h3> Followers Activity </h3>
 
 <ul>
-<% @their_activity.each do |activity| %>
+<% @dashboard_display.followers_activity.each do |activity| %>
 <p> <strong> <%= activity[:actor][:login] %> </strong> did <em> <%= activity[:type] %> </em> for <%= activity[:repo][:name] %> on <%= activity[:created_at] %> </p>
  <% end %>
 </ul>

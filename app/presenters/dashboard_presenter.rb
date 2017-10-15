@@ -81,4 +81,14 @@ class DashboardPresenter
      commits
   end
 
+  def followers_activity
+    api_followers_activity_call = GithubService.new(current_user).followers_activity_call
+
+    present_followers_activity(api_followers_activity_call)
+  end
+
+  def present_followers_activity(api_followers_activity_call)
+    api_followers_activity_call
+  end
+
 end
