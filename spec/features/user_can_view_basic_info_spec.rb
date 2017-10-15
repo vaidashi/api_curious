@@ -18,6 +18,6 @@ feature "User can view their basic info" do
 # save_and_open_page
       expect(page).to have_content("starred count: 1")
     end
-end
-
   end
+
+end

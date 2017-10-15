@@ -41,4 +41,16 @@ class DashboardPresenter
     @starred_count = api_starred_call.count
   end
 
+  def following_list
+    api_following_call = GithubService.new(current_user).following_call
+
+    present_following_list(api_following_call)
+  end
+
+  def present_following_list(api_following_call)
+    api_following_call.map do |follower|
+      follower[:login]
+    end
+  end
+
 end

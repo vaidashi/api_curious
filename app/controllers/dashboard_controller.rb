@@ -15,11 +15,11 @@ class DashboardController < ApplicationController
      end
 
 
-     following_response = @conn.get("/users/#{current_user.nickname}/following")
-     following = JSON.parse(following_response.body)
-     @list_of_following = following.map do |fol|
-       fol["login"]
-     end
+    #  following_response = @conn.get("/users/#{current_user.nickname}/following")
+    #  following = JSON.parse(following_response.body)
+    #  @list_of_following = following.map do |fol|
+    #    fol["login"]
+    #  end
 
      followers_response = @conn.get("/users/#{current_user.nickname}/followers")
      followers = JSON.parse(followers_response.body)

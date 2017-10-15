@@ -26,6 +26,11 @@ class GithubService
      @starred = JSON.parse(starred_response.body, symbolize_names: true)
   end
 
+  def following_call
+    following_response = @conn.get("/users/#{current_user.nickname}/following")
+    @following = JSON.parse(following_response.body, symbolize_names: true)
+  end
+
   private
 
   attr_reader :current_user
